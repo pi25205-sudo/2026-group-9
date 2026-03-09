@@ -86,6 +86,7 @@ GROUP PHOTO. Add a group photo here.
 Qualitative Analysis: Think Aloud
 
 ❌User Observations:
+
 Attack Frequency: Players complained that having to click the mouse for every single attack was exhausting due to the high frequency of repetitive actions.
 
 Game Guidance: Players suggested adding various in-game instructions to reduce the sense of confusion during their first playthrough.
