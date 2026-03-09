@@ -13,7 +13,7 @@ You will be developing your game using [P5.js](https://p5js.org) a javascript li
 - [P5.js tutorials](https://p5js.org/tutorials/) 
 - [Coding Train P5.js](https://thecodingtrain.com/tracks/code-programming-with-p5-js) course - go here for enthusiastic video tutorials from Dan Shiffman (recommended!)
 
-Kill that Virus (KTV) - Game Introduction
+## KTV
 
 Kill that Virus (or simply KTV) is a Roguelike game inspired by Vampire Survivors and Plague Inc. You play as a single cell within the human body, 
 
