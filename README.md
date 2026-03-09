@@ -15,11 +15,15 @@ You will be developing your game using [P5.js](https://p5js.org) a javascript li
 
 ## KTV
 
-Kill that Virus (or simply KTV) is a Roguelike game inspired by Vampire Survivors and Plague Inc. You play as a single cell within the human body, 
+Kill that Virus (or simply KTV) is a Roguelike game inspired by Vampire Survivors and Plague Inc. 
 
-on a mission to purge all foreign pathogens and impurities. Players can dive into the Story Mode to experience a meticulously designed plot full of 
+You play as a single cell within the human body, 
 
-twists and turns, or test their limits in Endless Mode for a pure, adrenaline-pumping Roguelike combat experience.
+on a mission to purge all foreign pathogens and impurities. 
+
+Players can dive into the Story Mode to experience a meticulously designed plot full of twists and turns, 
+
+or test their limits in Endless Mode for a pure, adrenaline-pumping Roguelike combat experience.
 
 Across both modes, players can enjoy the following signature features crafted by our team:
 
@@ -37,9 +41,13 @@ Educational Trivia: Fun facts and insights into how the human body works.
 
 And many more hidden surprises!
 
-In KTV, the gameplay experience evolves based on your actions and choices. As your capabilities grow, the enemies and levels will 
+In KTV, the gameplay experience evolves based on your actions and choices. 
 
-continuously challenge your reflexes and tactical skills. We strive to deliver a unique, heart-racing, and addictive experience for every player!
+As your capabilities grow, the enemies and levels will 
+
+continuously challenge your reflexes and tactical skills. 
+
+We strive to deliver a unique, heart-racing, and addictive experience for every player!
 
 
 —Purge or be purged. The choice is yours.—
