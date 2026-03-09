@@ -32,10 +32,15 @@ We strive to deliver a unique, heart-racing, and addictive experience for every 
 Group 9 Developers
 
 [Snapshot of Latest version of the Game!]
+![messageImage_1773095176948](https://github.com/user-attachments/assets/e16f068c-57cc-4c2c-a1a0-edaa304d4dbe)
+![messageImage_1773095199516](https://github.com/user-attachments/assets/b3a64b21-95ef-439a-a950-c1aab06e6b9a)
+
 
 [Link of Latest version of the Game!]
 
 [Demo video!]
+![新增專案](https://github.com/user-attachments/assets/bf459aad-1ec8-4561-bec8-25a3b12d70c9)
+
 
 ## Your Group
 
