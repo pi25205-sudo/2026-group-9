@@ -89,7 +89,26 @@ GROUP PHOTO. Add a group photo here.
 
 - 15% ~750 words
 
-- One qualitative evaluation (of your choice) 
+Qualitative Analysis: Think Aloud
+User Observations:
+Attack Frequency: Players complained that having to click the mouse for every single attack was exhausting due to the high frequency of repetitive actions.
+
+Game Guidance: Players suggested adding various in-game instructions to reduce the sense of confusion during their first playthrough.
+
+Visual Feedback (Projectiles): Players recommended adding flight trajectories (trails) to attacks for better visual identification and clarity.
+
+Impact Feedback (Damage): Players suggested adding screen shake and prominent warning effects when taking damage to enhance the overall gameplay experience and feel.
+
+Tutorial Level: Players suggested implementing a tutorial stage to help them better understand the mechanics and objectives of the game.
+
+Analysis Outcome:
+Optimizing Attack Mechanics: The most frequent feedback received was regarding the "one click, one attack" constraint. Players found constant clicking tedious, especially when facing large swarms of enemies. To resolve this and improve immersion, we will implement an auto-fire feature that allows continuous weapon use by holding down the mouse button.
+
+Improving Intuitive Design: Requests for both game instructions and tutorial levels reflect a core issue: the current gameplay experience is not intuitive enough. While this can be addressed through tutorials, we aim to prioritize improving the UI/UX design and providing clearer on-screen guidance to create a more seamless learning curve.
+
+Enhancing Visual Clarity: Suggestions for prominent flight trajectories indicate that our current object rendering and visual emphasis need improvement. We will adopt this feedback by using high-contrast, vivid color palettes for future weapons and adding visual trails where necessary to improve tracking.
+
+Refining Game "Feel" (Juiciness): Compared to the current system where taking damage only results in a numerical HP deduction, adding screen shake and visual alerts will significantly improve the "game feel" and sensory feedback. We have decided to implement these features in the next update.
 
 - One quantitative evaluation (of your choice) 
 
