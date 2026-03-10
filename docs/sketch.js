@@ -2,7 +2,8 @@ let bgImg1, bgImg2;
 let player;
 let bullets = [];
 let enemies = [];
-let timer = 45;
+// let timer = 45;
+let timer = 15;
 let killCount = 0;
 let currentLevel = 1;
 let gameState = "PLAY";
@@ -10,7 +11,8 @@ let gameState = "PLAY";
 const WORLD_W = 1920;
 const WORLD_H = 1080;
 let levelDuration = 45;
-const VICTORY_KILLS_LV2 = 20; // 第二關需要的殺敵數門檻
+// const VICTORY_KILLS_LV2 = 20; // 第二關需要的殺敵數門檻
+const VICTORY_KILLS_LV2 = 10; // 第二關需要的殺敵數門檻
 
 function preload() {
     bgImg1 = loadImage('01.png');
@@ -61,6 +63,8 @@ function updateGame() {
     if (keyIsDown(68)) player.x += 4;
     if (keyIsDown(87)) player.y -= 4;
     if (keyIsDown(83)) player.y += 4;
+
+    if (keyIsDown(80)) goToLevel2();
 
     player.x = constrain(player.x, 0, WORLD_W);
     player.y = constrain(player.y, 0, WORLD_H);
@@ -142,7 +146,8 @@ function updateObjects() {
 function goToLevel2() {
     currentLevel = 2;
     levelDuration = 60;
-    timer = 60;
+    // timer = 60;
+    timer = 25;
     killCount = 0; // 重置第二關的殺敵數
     enemies = [];
     bullets = [];
