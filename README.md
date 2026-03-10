@@ -85,7 +85,7 @@ GROUP PHOTO. Add a group photo here.
 
 Qualitative Analysis: Think Aloud
 
-❌User Observations:
+🤔User Observations:
 
 Attack Frequency: Players complained that having to click the mouse for every single attack was exhausting due to the high frequency of repetitive actions.
 
@@ -97,7 +97,7 @@ Impact Feedback (Damage): Players suggested adding screen shake and prominent wa
 
 Tutorial Level: Players suggested implementing a tutorial stage to help them better understand the mechanics and objectives of the game.
 
-⭕Analysis Outcome:
+✨Analysis Outcome:
 
 Optimizing Attack Mechanics: The most frequent feedback received was regarding the "one click, one attack" constraint. Players found constant clicking tedious, especially when facing large swarms of enemies. To resolve this and improve immersion, we will implement an auto-fire feature that allows continuous weapon use by holding down the mouse button.
 
