@@ -57,7 +57,7 @@ function draw() {
 
 function updateGame() {
     // 自動射擊邏輯：按住滑鼠且過了冷卻時間
-  if (mouseIsPressed && millis() - lastShotTime > fireRate) {
+  if (mouseIsPressed && millis() - lastshotTime > fireRate) {
     let camX = constrain(width / 2 - player.x, -(WORLD_W - width), 0);
     let camY = constrain(height / 2 - player.y, -(WORLD_H - height), 0);
     
