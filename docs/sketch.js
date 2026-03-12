@@ -9,6 +9,8 @@ let currentLevel = 1;
 let gameState = "PLAY";
 let lastshotTime = 0;
 let fireRate = 200; // 射擊間隔200毫秒
+let shakeTimer = 0;
+let redMaskAlpha = 0;
 
 const WORLD_W = 1920;
 const WORLD_H = 1080;
@@ -55,9 +57,48 @@ function draw() {
     } else {
         showEndScreen("CELL DESTROYED");
     }
+    if (shakeTimer > 0){
+        translate(random(-5,5), random(-5,5));
+        shakeTimer--;
+    }
+    if (redMaskAlpha > 0){
+        fill(255, 0, 0, redMaskAlpha);
+        rect(0, 0, width, height);
+        redMaskAlpha -=10;
+    }
 }
 
 function updateGame() {
+    let moveXMult = 1;
+    let moveYMult = 1;
+    let confusionMsg = "";
+    if(currentLevel ===3){
+        if(timer <=50 && timer > 45){
+            moveXMult = -1;
+            confusionMsg = "WARNING: HORIZONTAL CONFUSION!\n警告:左右移動失調!";
+        }
+        else if(timer <=30 && timer > 25){
+            moveYMult = -1;
+            confusionMsg = "WARNING: VERTICAL CONFUSION!\n警告:上下移動失調!";
+        }
+        else if(timer <=15 && timer > 10){
+            moveXMult = -1;
+            moveYMult = -1;
+            confusionMsg = "WARNING: COMPLETE CONFUSION!\n警告:全方位移動失調!";
+        }
+
+    }
+    if(KeyIsDown(65)) player.x-= 4 * moveXMult;//A
+    if(KeyIsDown(68)) player.x+= 4 * moveXMult;//D
+    if(KeyIsDown(87)) player.y-= 4 * moveYMult;//W
+    if(KeyIsDown(83)) player.y+= 4 * moveYMult;//S
+
+    if(confusionMsg !== ""){
+        fill(255, 0, 0);
+        textSize(30);
+        textAlign(CENTER);
+        text(confusionMsg, width/2, height/2, 100);
+    }
     // 自動射擊邏輯：按住滑鼠且過了冷卻時間
   if (mouseIsPressed && millis() - lastshotTime > fireRate) {
     let camX = constrain(width / 2 - player.x, -(WORLD_W - width), 0);
@@ -167,6 +208,8 @@ function updateObjects() {
         if (dPlayer < (player.size + e.size) / 2) {
             player.hp--;
             enemies.splice(i, 1);
+            shakeTimer = 10;
+            redMaskAlpha = 150;
         } else if (e.hp <= 0) {
             enemies.splice(i, 1);
             killCount++; // 擊殺數增加
@@ -257,15 +300,20 @@ function drawUI() {
     if (timer > levelDuration - 5) {
         push();
         textAlign(CENTER, CENTER);
-        textSize(50);
-        fill(255, 200, 200);
-        textStyle(BOLD);
-        stroke(0);
-        strokeWeight(4);
         let title = " ";
+        let currentLevelDuration = (currentLevel === 1) ? 15 : (currentLevel === 2 ? 25 : 60);
         if(currentLevel === 1) title = "LEVEL 1: Lost in Lungs";
         else if(currentLevel === 2) title = "LEVEL 2: Broken Brain";
         else title = "LEVEL 3: Get THE F@%# OUT!";
+        if(timer > currentLevelDuration - 5){
+            push();
+            textAlign(CENTER, CENTER);
+            textSize(50);
+            fill(255, 200, 200);
+            textStyle(BOLD);
+            stroke(0);
+            strokeWeight(4);
+            }
         text(title, width / 2, height / 2);
         pop();
     }
