@@ -40,7 +40,7 @@ Tap here! (https://offjjx.atlassian.net/jira/software/projects/SCRUM/boards/1?at
 
 <img width="1920" height="1080" alt="MainMenu" src="https://github.com/user-attachments/assets/7d509195-b73f-4de7-8836-eb1c6b9c4b80" />
 
-![messageImage_1773095199516](https://github.com/user-attachments/assets/b3a64b21-95ef-439a-a950-c1aab06e6b9a)
+![messageImage_1773355627386](https://github.com/user-attachments/assets/bc6467a4-8cf6-4ad3-b1dc-55f7babb7f24)
 
 
 🔗[Link of Latest version of the Game!]
