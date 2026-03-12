@@ -31,6 +31,10 @@ We strive to deliver a unique, heart-racing, and addictive experience for every 
 —Purge or be purged. The choice is yours.—
 Group 9 Developers
 
+📝[Link of our Kanban board]
+
+Tap here! (https://offjjx.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiZjQ5MmMyOTljMzQ2NGY1OTkwZGIzM2Y1NTIyNjUzOWYiLCJwIjoiaiJ9)
+
 📸[Snapshot of Latest version of the Game!]
 
 ![messageImage_1773095176948](https://github.com/user-attachments/assets/e16f068c-57cc-4c2c-a1a0-edaa304d4dbe)
