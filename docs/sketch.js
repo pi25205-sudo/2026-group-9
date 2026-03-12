@@ -34,6 +34,10 @@ function draw() {
 
     if (gameState === "PLAY") {
         updateGame();
+    if (shakeTimer > 0){
+        translate(random(-5,5), random(-5,5));
+        shakeTimer--;
+    }
 
         push();
         // 攝影機跟隨邏輯
@@ -56,10 +60,6 @@ function draw() {
         showEndScreen("ALL INFECTIONS CLEARED!");
     } else {
         showEndScreen("CELL DESTROYED");
-    }
-    if (shakeTimer > 0){
-        translate(random(-5,5), random(-5,5));
-        shakeTimer--;
     }
     if (redMaskAlpha > 0){
         fill(255, 0, 0, redMaskAlpha);
@@ -88,10 +88,10 @@ function updateGame() {
         }
 
     }
-    if(keyIsDown(65)) player.x-= 4 * moveXMult;//A
-    if(KeyIsDown(68)) player.x+= 4 * moveXMult;//D
-    if(KeyIsDown(87)) player.y-= 4 * moveYMult;//W
-    if(KeyIsDown(83)) player.y+= 4 * moveYMult;//S
+    if(keyIsDown(65)) player.x-= 4 * moveXMult;
+    if(keyIsDown(68)) player.x+= 4 * moveXMult;
+    if(keyIsDown(87)) player.y-= 4 * moveYMult;
+    if(keyIsDown(83)) player.y+= 4 * moveYMult;
 
     if(confusionMsg !== ""){
         fill(255, 0, 0);
@@ -117,20 +117,6 @@ function updateGame() {
     
     lastshotTime = millis(); // 更新最後射擊時間
   }
-    // 玩家移動
-    // if (keyIsDown(LEFT_ARROW)) player.x -= 4;
-    // if (keyIsDown(RIGHT_ARROW)) player.x += 4;
-    // if (keyIsDown(UP_ARROW)) player.y -= 4;
-    // if (keyIsDown(DOWN_ARROW)) player.y += 4;
-    if (keyIsDown(65)) player.x -= 4;
-    if (keyIsDown(68)) player.x += 4;
-    if (keyIsDown(87)) player.y -= 4;
-    if (keyIsDown(83)) player.y += 4;
-
-    if (keyIsDown(80)) goToLevel2();
-
-    player.x = constrain(player.x, 0, WORLD_W);
-    player.y = constrain(player.y, 0, WORLD_H);
 
     // 敵人生成：第二關生成頻率稍快
     // 根據關卡調整生成頻率 (數字越小越快)
@@ -300,11 +286,9 @@ function drawUI() {
     if (timer > levelDuration - 5) {
         push();
         textAlign(CENTER, CENTER);
-        let title = " ";
+        
         let currentLevelDuration = (currentLevel === 1) ? 15 : (currentLevel === 2 ? 25 : 60);
-        if(currentLevel === 1) title = "LEVEL 1: Lost in Lungs";
-        else if(currentLevel === 2) title = "LEVEL 2: Broken Brain";
-        else title = "LEVEL 3: Get THE F@%# OUT!";
+        
         if(timer > currentLevelDuration - 5){
             push();
             textAlign(CENTER, CENTER);
@@ -313,9 +297,15 @@ function drawUI() {
             textStyle(BOLD);
             stroke(0);
             strokeWeight(4);
-            }
-        text(title, width / 2, height / 2);
-        pop();
+
+            let title = "";
+            if(currentLevel === 1) title = "LEVEL 1: Lost in Lungs";
+            else if(currentLevel === 2) title = "LEVEL 2: Broken Brain";
+            else title = "LEVEL 3: Get THE F@%# OUT!";
+            
+            text(title, width / 2, height / 2);
+            pop();
+        }
     }
 
     drawThermometer(900, 100);
