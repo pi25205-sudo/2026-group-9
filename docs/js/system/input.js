@@ -1,14 +1,32 @@
 function handlePlayerMovement() {
-    // 玩家移動
-    if (keyIsDown(65)) player.x -= 4;
-    if (keyIsDown(68)) player.x += 4;
-    if (keyIsDown(87)) player.y -= 4;
-    if (keyIsDown(83)) player.y += 4;
-    // 按下P键进入第二关，方便调试
-    if (keyIsDown(80)) goToLevel2();
+    let moveXMult = 1;
+    let moveYMult = 1;
+    let confusionMsg = "";
+    if (currentLevel === 3) {
+        if (timer <= 50 && timer > 45) {
+            moveXMult = -1;
+            confusionMsg = "WARNING: HORIZONTAL CONFUSION!\n警告:左右移動失調!";
+        } else if (timer <= 30 && timer > 25) {
+            moveYMult = -1;
+            confusionMsg = "WARNING: VERTICAL CONFUSION!\n警告:上下移動失調!";
+        } else if (timer <= 15 && timer > 10) {
+            moveXMult = -1;
+            moveYMult = -1;
+            confusionMsg = "WARNING: COMPLETE CONFUSION!\n警告:全方位移動失調!";
+        }
 
-    player.x = constrain(player.x, 0, WORLD_W);
-    player.y = constrain(player.y, 0, WORLD_H);
+    }
+    if (keyIsDown(65)) player.x -= 4 * moveXMult;
+    if (keyIsDown(68)) player.x += 4 * moveXMult;
+    if (keyIsDown(87)) player.y -= 4 * moveYMult;
+    if (keyIsDown(83)) player.y += 4 * moveYMult;
+
+    if (confusionMsg !== "") {
+        fill(255, 0, 0);
+        textSize(30);
+        textAlign(CENTER);
+        text(confusionMsg, width / 2, height / 2, 100);
+    }
 }
 
 function handleShooting() {

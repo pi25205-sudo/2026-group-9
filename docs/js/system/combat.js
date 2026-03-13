@@ -32,6 +32,10 @@ function updateEnemiesAndCombat() {
         if (dPlayer < (player.size + e.size) / 2) {
             player.hp--;
             enemies.splice(i, 1);
+
+            shakeTimer = 10;
+            redMaskAlpha = 150;
+
         } else if (e.hp <= 0) {
             enemies.splice(i, 1);
             killCount++; // 擊殺數增加

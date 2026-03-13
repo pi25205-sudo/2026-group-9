@@ -12,10 +12,11 @@ function checkProgress() {
         } else if (currentLevel === 2) {
             // 第二關：時間到「且」殺敵滿 20
             if (killCount >= VICTORY_KILLS_LV2) {
-                gameState = "WIN";
-            } else {
-                gameState = "GAMEOVER"; // 沒殺滿 20 隻，判定失敗
-            }
+                goToLevel3();
+            } else gameState = "GAMEOVER";
+        } else if (currentLevel === 3) {
+            if (killCount >= 45) gameState = "WIN";
+            else gameState = "GAMEOVER";
         }
     }
 }
@@ -29,6 +30,17 @@ function goToLevel2() {
     levelDuration = 25;
     timer = 25;
     killCount = 0; // 重置第二關的殺敵數
+    enemies = [];
+    bullets = [];
+    resetPlayer();
+}
+
+function goToLevel3() {
+    currentLevel = 3;
+    levelDuration = 60; // 設定通關時間一分鐘
+    timer = 60;
+    killCount = 0;
+    VICTORY_KILLS_LV3 = 45; // 新增一個變數來存第三關目標
     enemies = [];
     bullets = [];
     resetPlayer();

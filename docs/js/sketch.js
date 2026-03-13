@@ -14,8 +14,11 @@ function draw() {
 }
 
 function updateGame() {
-    handleShooting();
+
+
     handlePlayerMovement();
+    handleShooting();
+
 
     spawnEnemies();
 

@@ -1,4 +1,4 @@
-let bgImg1, bgImg2;
+let bgImg1, bgImg2, bgImg3;
 let player;
 let bullets = [];
 let enemies = [];
@@ -10,3 +10,5 @@ let currentLevel = 1;
 let gameState = "PLAY";
 let lastShotTime = 0;
 let fireRate = 200; // 射擊間隔200毫秒
+let shakeTimer = 0;
+let redMaskAlpha = 0;

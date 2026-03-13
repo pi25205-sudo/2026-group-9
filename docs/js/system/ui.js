@@ -4,7 +4,8 @@ function drawWorld() {
     translate(cam.x, cam.y);
     // 根據當前關卡顯示背景
     if (currentLevel === 1) image(bgImg1, 0, 0, WORLD_W, WORLD_H);
-    else image(bgImg2, 0, 0, WORLD_W, WORLD_H);
+    else if (currentLevel === 2) image(bgImg2, 0, 0, WORLD_W, WORLD_H);
+    else image(bgImg3, 0, 0, WORLD_W, WORLD_H);
 
     drawGameContent();
     pop();
@@ -52,12 +53,23 @@ function drawUI() {
     if (timer > levelDuration - 5) {
         push();
         textAlign(CENTER, CENTER);
-        textSize(50);
-        fill(255, 200, 200);
-        textStyle(BOLD);
-        stroke(0);
-        strokeWeight(4);
-        let title = currentLevel === 1 ? "-Infected Lungs-" : "-Toxic Stomach-";
+
+        let currentLevelDuration = (currentLevel === 1) ? 15 : (currentLevel === 2 ? 25 : 60);
+        let title = "";
+        if (currentLevel === 1) title = "LEVEL 1: Lost in Lungs";
+        else if (currentLevel === 2) title = "LEVEL 2: Broken Brain";
+        else title = "LEVEL 3: Get THE F@%# OUT!";
+
+        if (timer > currentLevelDuration - 5) {
+            push();
+            textAlign(CENTER, CENTER);
+            textSize(50);
+            fill(255, 200, 200);
+            textStyle(BOLD);
+            stroke(0);
+            strokeWeight(4);
+        }
+
         text(title, width / 2, height / 2);
         pop();
     }
