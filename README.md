@@ -1,6 +1,8 @@
 # 2026-group-9
 2026 COMSM0166 group 9
 
+<img width="1920" height="1080" alt="MainMenu" src="https://github.com/user-attachments/assets/7d509195-b73f-4de7-8836-eb1c6b9c4b80" />
+
 ## ☣️KTV☣️
 
 KTV☣️:Kill that Virus is a Roguelike game inspired by Vampire Survivors and Plague Inc. 
@@ -36,9 +38,6 @@ Group 9 Developers
 Tap here! (https://offjjx.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiZjQ5MmMyOTljMzQ2NGY1OTkwZGIzM2Y1NTIyNjUzOWYiLCJwIjoiaiJ9)
 
 📸[Snapshot of Latest version of the Game!]
-
-
-<img width="1920" height="1080" alt="MainMenu" src="https://github.com/user-attachments/assets/7d509195-b73f-4de7-8836-eb1c6b9c4b80" />
 
 ![messageImage_1773355627386](https://github.com/user-attachments/assets/bc6467a4-8cf6-4ad3-b1dc-55f7babb7f24)
 
