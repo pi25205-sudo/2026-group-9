@@ -33,9 +33,7 @@ We strive to deliver a unique, heart-racing, and addictive experience for every 
 —Purge or be purged. The choice is yours.—
 Group 9 Developers
 
-📝[Link of our Kanban board]
 
-Tap here! (https://offjjx.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiZjQ5MmMyOTljMzQ2NGY1OTkwZGIzM2Y1NTIyNjUzOWYiLCJwIjoiaiJ9)
 
 📸[Snapshot of Latest version of the Game!]
 
@@ -62,6 +60,10 @@ GROUP PHOTO. Add a group photo here.
 - Group member 3, Yize Yang, jn25127@bristol.ac.uk, role
 - Group member 4, Zhanyu xu, pr25318@bristol.ac.uk, role
 - Group member 5, Jianjiang Yang, dx25555@bristol.ac.uk, role
+
+- 📝[Link of our Kanban board]
+
+(https://offjjx.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiZjQ5MmMyOTljMzQ2NGY1OTkwZGIzM2Y1NTIyNjUzOWYiLCJwIjoiaiJ9)
 
 ## Project Report
 
