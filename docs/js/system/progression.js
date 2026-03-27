@@ -44,4 +44,10 @@ function goToLevel3() {
     enemies = [];
     bullets = [];
     resetPlayer();
+    if(killCount >= 45){
+        triggerGameWin();
+    }
+    else{gameState = "GAMEOVER";}
 }
+
+
