@@ -5,6 +5,7 @@ function updateTimer() {
 
 function checkProgress() {
     // --- 關鍵修改：通關判定邏輯 ---
+    if (gameState !== "PLAY") return;
     if (timer <= 0) {
         if (currentLevel === 1) {
             // 第一關：只要時間到就進下一關
