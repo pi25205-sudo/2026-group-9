@@ -1,4 +1,4 @@
-let comicImages = ["C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9"]; // 存放10張圖
+let comicImages = []; // 存放10張圖
 let currentComicPage = 0;
 let comicFadeAlpha = 0; // 控制黑色遮罩透明度
 let isFading = false; // 是否正在轉場中
@@ -8,9 +8,9 @@ let endingBGM; // 結尾音樂
 function preload() {
     // 載入 10 張圖片，假設檔名是 comic0.png 到 comic9.png
     for (let i = 0; i < 10; i++) {
-        comicImages[i] = loadImage(`assets/image/Comic/C${i}.png`);
+        comicImages[i] = loadImage(`asset/image/Comic/C${i}.png`);
     }
-    endingBGM = loadSound('assets/BGM/Ending.mp3'); // 請確保路徑正確
+    endingBGM = loadSound('asset/BGM/Ending.mp3'); // 請確保路徑正確
 }
 
 function draw() {
@@ -75,7 +75,11 @@ function triggerGameWin() {
     comicFadeAlpha = 255; // 從全黑開始
     
     // 播放音樂
-    if (!endingBGM.isPlaying()) {
+    if (endingBGM && !endingBGM.isPlaying()) {
         endingBGM.loop(); 
     }
+}
+
+document.oncontextmenu = function() {
+    if (gameState === "WIN") return false;
 }
