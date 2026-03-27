@@ -20,7 +20,6 @@ function draw() {
 }
 
 function showComicBook() {
-    console.log("I AM DRAWING THE COMIC NOW!");
     background(0); // 漫畫底色為黑
     
     // 1. 顯示目前的漫畫頁面
@@ -50,6 +49,13 @@ function showComicBook() {
 }
 
 function mousePressed() {
+    if (gameState === "WIN") {
+    // 使用者點了第一下，聲音就合法了
+    userStartAudio(); // p5.js 專門用來處理瀏覽器權限的指令
+    if (endingBGM && !endingBGM.isPlaying()) {
+        endingBGM.loop();
+    }
+}
     if (gameState === "WIN") {
         if (mouseButton === LEFT) {
             // 只要還沒到最後一張 (index 9)，就加 1
