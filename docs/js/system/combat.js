@@ -44,7 +44,9 @@ function updateEnemiesAndCombat() {
 
         } else if (e.hp <= 0) {
             if (enemyDeathSound) {
+                // 随机音频速率，改变音调
                 enemyDeathSound.rate(random(0.9, 1.1));
+                // 当前音频播放完后再播放下一个音频
                 enemyDeathSound.playMode('sustain');
                 enemyDeathSound.play();
             }
