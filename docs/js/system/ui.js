@@ -13,11 +13,13 @@ function drawWorld() {
 
 function drawGameContent() {
     // 畫主角
-    fill(0, 255, 150);
-    ellipse(player.x, player.y, player.size);
+     
+    drawPlayer(); // new add 调用我们在player.js里写的图像绘制函数
+
+
     // drawHealthBar(player.x, player.y - 25, player.hp, 10, "green");
     drawHealthBar(player.x, player.y - 25, player.hp, 20, "green");
-    // 畫敵人
+    /* 畫敵人
     for (let e of enemies) {
         push();
         noStroke();
@@ -50,7 +52,23 @@ function drawGameContent() {
         }
         pop();
         drawHealthBar(e.x, e.y - (e.size * 0.75), e.hp, e.maxHp, "red");
-    }
+    }*/
+    
+    for (let e of enemies)
+         {
+            push();
+
+    // 直接画图片，原来的形状全部替换掉
+            imageMode(CENTER);
+            if (e.flashTimer > 0) {
+                tint(255, 150);
+                e.flashTimer--;
+            }
+            image(enemyImages[e.imgKey], e.x, e.y, e.size, e.size);
+
+            pop();
+            drawHealthBar(e.x, e.y - (e.size * 0.75), e.hp, e.maxHp, "red");
+         }
     // 畫子彈
     fill(255, 255, 0);
     for (let b of bullets) ellipse(b.x, b.y, 12);
