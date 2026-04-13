@@ -1,46 +1,63 @@
 
-let player;
 let playerImg;
-let originalDraw;
+let playerImgLoaded = false;
 
 function resetPlayer() {
-  player = { x: WORLD_W / 2, y: WORLD_H / 2, size: 30, hp: 20 };
+    player = {x: WORLD_W / 2, y: WORLD_H / 2, size: 30, hp: 20};
 }
+
+// 加载玩家图片
 function loadPlayerImage() {
-  playerImg = loadImage("docs/asset/role/d339f22abea3fe7a6bec1aa078959368.jpg");
+    playerImg = loadImage(
+        "asset/role/d339f22abea3fe7a6bec1aa078959368.jpg",
+        () => {
+            playerImgLoaded = true;
+        },
+        (err) => {
+            console.error("图片加载失败:", err);
+        }
+    );
 }
 
-// 新的绘制函数，替换原来的 draw
-function patchedDraw() {
-
-  if (originalDraw) originalDraw();
-  
-
-  if (playerImg && playerImg.width) {
-    image(playerImg, player.x - player.size/2, player.y - player.size/2, player.size, player.size);
-  } else {
- 
-    fill(0, 255, 0);
-    circle(player.x, player.y, player.size);
-  }
+// 在 preload 中调用加载
+if (typeof preload === 'function') {
+    const originalPreload = preload;
+    preload = function() {
+        loadPlayerImage();
+        if (originalPreload) originalPreload();
+    };
 }
 
-function hijackDraw() {
-  if (window.draw && !originalDraw) {
-    originalDraw = window.draw;
-    window.draw = patchedDraw;
-  }
+// 绘制玩家（替换原来的圆形绘制）
+function drawPlayer() {
+    if (!player) return;
+    
+    if (playerImgLoaded && playerImg && playerImg.width > 0) {
+        imageMode(CENTER);
+        image(playerImg, player.x, player.y, player.size, player.size);
+    } else {
+        fill(100, 200, 150);
+        circle(player.x, player.y, player.size);
+    }
 }
 
-loadPlayerImage();
-
-if (window.setup) {
- 
-  let originalSetup = window.setup;
-  window.setup = function() {
-    if (originalSetup) originalSetup();
-    hijackDraw();
-  };
+// 劫持 draw 函数来绘制玩家图片
+if (typeof draw === 'function') {
+    const originalDraw = draw;
+    draw = function() {
+        originalDraw();
+        drawPlayer();
+    };
 } else {
-  setTimeout(hijackDraw, 100);
+    // 如果 draw 还不存在，等待它
+    const checkDraw = setInterval(() => {
+        if (typeof draw === 'function') {
+            clearInterval(checkDraw);
+            const originalDraw = draw;
+            draw = function() {
+                originalDraw();
+                drawPlayer();
+            };
+        }
+    }, 100);
 }
