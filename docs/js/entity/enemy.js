@@ -11,7 +11,15 @@ function createEnemy(type, x, y) {
         size: template.size,
         contactDamage: template.contactDamage,
         color: template.color,
-        speed: template.speed
+        speed: template.speed,
+
+        splitCount: template.splitCount || 0,
+
+        sprintPeriod: template.sprintPeriod || 0,
+        sprintSpeed: template.sprintSpeed,
+        sprintTimer: 0,
+        sprintDx: 0,
+        sprintDy: 0
     };
 }
 
@@ -34,5 +42,26 @@ function damageEnemy(enemy, amount) {
 
     if (enemy.hp < 0) {
         enemy.hp = 0;
+    }
+}
+
+function moveSprinter(enemy, player) {
+    enemy.sprintTimer++;
+
+    if (enemy.sprintTimer >= enemy.sprintPeriod) {
+        let enemyPos = createVector(enemy.x, enemy.y);
+        let playerPos = createVector(player.x, player.y);
+        let direction = p5.Vector.sub(playerPos, enemyPos);
+        direction.normalize();
+        enemy.sprintDx = direction.x;
+        enemy.sprintDy = direction.y;
+        enemy.sprintTimer -= enemy.sprintPeriod * 6;
+    }
+
+    if (enemy.sprintTimer < 0) {
+        enemy.x += enemy.sprintDx * enemy.sprintSpeed;
+        enemy.y += enemy.sprintDy * enemy.sprintSpeed;
+    } else {
+        moveEnemyTowardPlayer(enemy, player);
     }
 }

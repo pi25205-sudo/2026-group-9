@@ -43,9 +43,9 @@ function spawnEnemies() {
             newEnemy = createEnemy("basic", spawnX, spawnY);
         } else {
             if (random() < 0.5) {
-                newEnemy = createEnemy("fast", spawnX, spawnY);
+                newEnemy = createEnemy("sprinter", spawnX, spawnY);
             } else {
-                newEnemy = createEnemy("tank", spawnX, spawnY);
+                newEnemy = createEnemy("sprinter", spawnX, spawnY);
             }
         }
 

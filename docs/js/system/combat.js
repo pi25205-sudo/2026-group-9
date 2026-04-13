@@ -18,7 +18,12 @@ function updateEnemiesAndCombat() {
     // 敵人追逐與碰撞
     for (let i = enemies.length - 1; i >= 0; i--) {
         let e = enemies[i];
-        moveEnemyTowardPlayer(e, player);
+
+        if (e.type === "sprinter") {
+            moveSprinter(e, player);
+        } else {
+            moveEnemyTowardPlayer(e, player);
+        }
         // 被子彈擊中
         for (let j = bullets.length - 1; j >= 0; j--) {
             if (dist(bullets[j].x, bullets[j].y, e.x, e.y) < e.size / 2 + 5) {
@@ -44,6 +49,16 @@ function updateEnemiesAndCombat() {
                 enemyDeathSound.play();
             }
 
+            if (e.splitCount) {
+                for (let k = 0; k < e.splitCount; k++) {
+                    let child = createEnemy("basic", e.x + random(-20, 20), e.y + random(-20, 20));
+                    child.size *= 0.75;
+                    child.hp = 2;
+                    child.maxHp = 2;
+                    child.color = e.color;
+                    enemies.push(child);
+                }
+            }
             spawnDeathParticles(e.x, e.y, e.color);
             enemies.splice(i, 1);
             killCount++; // 擊殺數增加

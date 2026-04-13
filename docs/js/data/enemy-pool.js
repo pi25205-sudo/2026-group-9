@@ -16,7 +16,7 @@ const ENEMY_POOL = {
         hp: 2,
         maxHp: 2,
         speed: 3.0,
-        size: 30,
+        size: 27,
         contactDamage: 1,
         color: [255, 100, 0],
         flashTimer: 0
@@ -24,12 +24,35 @@ const ENEMY_POOL = {
     tank: {
         id: "tank",
         shape: "rect",
-        hp: 6,
-        maxHp: 6,
+        hp: 7,
+        maxHp: 7,
         speed: 2.0,
         size: 50,
         contactDamage: 2,
         color: [0, 0, 255],
         flashTimer: 0
+    },
+    splitter: {
+        id: "splitter",
+        shape: "circle",
+        hp: 5,
+        maxHp: 5,
+        speed: 2.0,
+        size: 40,
+        contactDamage: 2,
+        color: [180, 0, 255],
+        splitCount: 2
+    },
+    sprinter: {
+        id: "sprinter",
+        shape: "triangle",
+        hp: 6,
+        maxHp: 6,
+        speed: 1.6,
+        size: 42,
+        contactDamage: 3,
+        color: [255, 40, 120],
+        sprintSpeed: 4.8,
+        sprintPeriod: 25
     }
 };
