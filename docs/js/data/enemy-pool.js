@@ -17,7 +17,7 @@ const ENEMY_POOL = {
         maxHp: 2,
         speed: 3.0,
         size: 30,
-        contactDamage: 2,
+        contactDamage: 1,
         color: [255, 100, 0],
         flashTimer: 0
     },

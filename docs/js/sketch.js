@@ -4,6 +4,7 @@ function preload() {
         comicImages[i] = loadImage(`asset/image/Comic/C${i}.png`);
     }
     endingBGM = loadSound('asset/BGM/Ending.mp3'); // 請確保路徑正確
+    enemyDeathSound = loadSound('asset/audio/enemy-death.wav')
 }
 
 function setup() {

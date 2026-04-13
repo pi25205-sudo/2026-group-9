@@ -13,3 +13,4 @@ let lastShotTime = 0;
 let fireRate = 200; // 射擊間隔200毫秒
 let shakeTimer = 0;
 let redMaskAlpha = 0;
+let enemyDeathSound;

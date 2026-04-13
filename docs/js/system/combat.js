@@ -31,13 +31,19 @@ function updateEnemiesAndCombat() {
         // 與玩家碰撞
         let dPlayer = dist(player.x, player.y, e.x, e.y);
         if (dPlayer < (player.size + e.size) / 2) {
-            player.hp--;
+            player.hp-=e.contactDamage;
             enemies.splice(i, 1);
 
             shakeTimer = 10;
             redMaskAlpha = 150;
 
         } else if (e.hp <= 0) {
+            if (enemyDeathSound) {
+                enemyDeathSound.rate(random(0.9, 1.1));
+                enemyDeathSound.playMode('sustain');
+                enemyDeathSound.play();
+            }
+
             spawnDeathParticles(e.x, e.y, e.color);
             enemies.splice(i, 1);
             killCount++; // 擊殺數增加
