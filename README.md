@@ -123,9 +123,7 @@ SUS(System Usability Scale)
 
 SUS is an internationally common user experience evaluation scale, which contains ten questions. The visualization results of the SUS table are as follows.
 
-![1776181791253](C:\Users\ADMINI~1\AppData\Local\Temp\1776181791253.png)
-
-
+<img width="696" height="506" alt="image" src="https://github.com/user-attachments/assets/bbdc7755-c3b2-46e1-bd1e-f571e8f7c2cf" />
 
 Descriptive statistics： 
 
@@ -134,7 +132,6 @@ Descriptive statistics：
 | 1                    | I   think that I would like to use this system frequently. | No                    | 4.10                                 | 4.00                 | 0.70                             | 3                  | 5                  | Goo d (4.0-   4.4)             |
 | 2                    | I found the   system unnecessarily complex.                | Yes                   | 2.40                                 | 2.00                 | 1.43                             | 1                  | 5                  | Poor (<3.   0)                 |
 | 3    | I thought   the system was easy to use.                      | No   | 4.60 | 5.00 | 0.49 | 4    | 5    | Exce llent (4.5   +) |
-| ---- | ------------------------------------------------------------ | ---- | ---- | ---- | ---- | ---- | ---- | -------------------- |
 | 4    | I think that I would need the support of a technical person   to use this system. | Yes  | 1.60 | 1.50 | 0.66 | 1    | 3    | Poor (<3.   0)       |
 | 5    | I found   the various functions in   this system were well integrated. | Yes  | 4.00 | 4.00 | 0.77 | 3    | 5    | Goo d (4.0-   4.4)   |
 | 6    | I thought there was too much inconsistency in this   system. | No   | 1.60 | 1.00 | 0.80 | 1    | 3    | Poor (<3.   0)       |
@@ -157,7 +154,7 @@ Descriptive statistics：
 
 NASA:
 
-![1776181992904](C:\Users\ADMINI~1\AppData\Local\Temp\1776181992904.png)
+<img width="951" height="817" alt="image" src="https://github.com/user-attachments/assets/04c01bbd-5cc4-46f8-8208-6341cc988fbc" />
 
 | Jean         | 4.06 | 2.14 | 1    | 2.75 | 4    | 5     | 8    | 2.25 |
 | ------------ | ---- | ---- | ---- | ---- | ---- | ----- | ---- | ---- |
