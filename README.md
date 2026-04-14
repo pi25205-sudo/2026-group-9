@@ -88,9 +88,7 @@ GROUP PHOTO. Add a group photo here.
 
 ### ✍️Evaluation💭
 
-- 15% ~750 words
-
-Qualitative Analysis: Think Aloud
+**Qualitative Analysis: Think Aloud**
 
 🤔User Observations:
 
@@ -115,8 +113,169 @@ Enhancing Visual Clarity: Suggestions for prominent flight trajectories indicate
 Refining Game "Feel" (Juiciness): Compared to the current system where taking damage only results in a numerical HP deduction, adding screen shake and visual alerts will significantly improve the "game feel" and sensory feedback. We have decided to implement these features in the next update.
 
 - One quantitative evaluation (of your choice) 
-
 - Description of how code was tested. 
+
+
+
+**Quantitative Evaluation**
+
+SUS(System Usability Scale)
+
+SUS is an internationally common user experience evaluation scale, which contains ten questions. The visualization results of the SUS table are as follows.
+
+![1776181791253](C:\Users\ADMINI~1\AppData\Local\Temp\1776181791253.png)
+
+
+
+Descriptive statistics： 
+
+| **Question** **No.** | **Simplified** **Question Description**                    | **Reve rse Scor ing** | **M**   **ea** **n** **Sc or** **e** | **Me** **dia** **n** | **Stan dard** **Devia** **tion** | **Mini mum Score** | **Maxi mum Score** | **Rati** **ng** **Leve** **l** |
+| -------------------- | ---------------------------------------------------------- | --------------------- | ------------------------------------ | -------------------- | -------------------------------- | ------------------ | ------------------ | ------------------------------ |
+| 1                    | I   think that I would like to use this system frequently. | No                    | 4.10                                 | 4.00                 | 0.70                             | 3                  | 5                  | Goo d (4.0-   4.4)             |
+| 2                    | I found the   system unnecessarily complex.                | Yes                   | 2.40                                 | 2.00                 | 1.43                             | 1                  | 5                  | Poor (<3.   0)                 |
+| 3    | I thought   the system was easy to use.                      | No   | 4.60 | 5.00 | 0.49 | 4    | 5    | Exce llent (4.5   +) |
+| ---- | ------------------------------------------------------------ | ---- | ---- | ---- | ---- | ---- | ---- | -------------------- |
+| 4    | I think that I would need the support of a technical person   to use this system. | Yes  | 1.60 | 1.50 | 0.66 | 1    | 3    | Poor (<3.   0)       |
+| 5    | I found   the various functions in   this system were well integrated. | Yes  | 4.00 | 4.00 | 0.77 | 3    | 5    | Goo d (4.0-   4.4)   |
+| 6    | I thought there was too much inconsistency in this   system. | No   | 1.60 | 1.00 | 0.80 | 1    | 3    | Poor (<3.   0)       |
+| 7    | I would   imagine that most people   would learn to use this system quickly. | Yes  | 4.60 | 5.00 | 0.92 | 2    | 5    | Exce llent (4.5   +) |
+| 8    | I found the system very cumbersome to use.                   | No   | 2.30 | 2.00 | 1.19 | 1    | 5    | Poor (<3.   0)       |
+| 9    | I felt   very confident using the   system.                  | Yes  | 4.60 | 5.00 | 0.49 | 4    | 5    | Exce llent (4.5   +) |
+| 10   | I needed to learn a lot   of things before I could use this   system. | No   | 1.70 | 1.00 | 1.27 | 1    | 5    | Poor (<3.   0)       |
+
+1、 Project advantages (Q3, Q7, Q9, Q4, Q6): The game is easy to use and the threshold is low. The core operation is to control the direction and attack of the mouse movement with the right hand, and the movement of the character with the left hand. It adopts the common style of the industry, which reduces the cognitive cost of players. It only needs a brief introduction, and the novice teaching will be added to the starting interface. The difficulty of the level is from simple to deep, which makes players familiar with the operation method and increases their confidence in using the game.
+
+2、 Good items (Q1, Q5, Q10): players' willingness to use, function integration needs to be improved. It is necessary to improve the playability and complexity of the game. At this stage, it is only the initial version, so give users a little simple feedback on the game, and the later version will increase the playability and complexity of the game.
+
+(1). Increase the types of weapons, from ordinary firearms at this stage to pistols, sniper rifles, daggers and grenades, etc.
+
+(2). As the level increases, new enemies and new mechanisms are added to improve the difficulty of the game.
+
+3、 Differential items (Q2, Q8): Technicians are required to guide the problem. There is no self-group solution. The later sequence needs to be improved, because the interface has not been introduced at this stage, and technical personnel still need to introduce the gameplay, so it is necessary to add a normative introduction process to assist players in getting started. At the same time, the operation fault tolerance design is added. For example, the attack judgment range is expanded without precise positioning. Reduce the levels caused by players' operating errors, and reduce the need for help from the root cause.
+
+
+
+NASA:
+
+![1776181992904](C:\Users\ADMINI~1\AppData\Local\Temp\1776181992904.png)
+
+| Jean         | 4.06 | 2.14 | 1    | 2.75 | 4    | 5     | 8    | 2.25 |
+| ------------ | ---- | ---- | ---- | ---- | ---- | ----- | ---- | ---- |
+| Shanl ey     | 3.75 | 2.41 | 1    | 2.00 | 3    | 5     | 9    | 3.00 |
+| Yuton g Liu  | 4.62 | 3.05 | 1    | 1.75 | 4.50 | 7.25  | 10   | 5.50 |
+| Chien Yu Kuo | 5.50 | 3.61 | 1    | 2.75 | 4.00 | 10.00 | 10   | 7.25 |
+| Hsin man Liu | 4.06 | 2.35 | 1    | 2.00 | 5.00 | 5.00  | 9    | 3.00 |
+| Chuc k       | 4.38 | 1.59 | 2    | 3.00 | 4.00 | 5.00  | 8    | 2.00 |
+| Frida        | 4.75 | 2.89 | 1    | 2.00 | 4.00 | 8.00  | 9    | 6.00 |
+| Jinni Li     | 4.81 | 3.06 | 1    | 1.00 | 5.00 | 7.25  | 10   | 6.25 |
+
+
+
+In summary, the evaluation data of the above six core dimensions, as well as the discreteness and high and low score characteristics of the evaluator's score, from the three core directions of reducing unreasonable task load, improving player performance satisfaction, and reducing frustration, provide implementable optimization suggestions for the group's subsequent development, and adapt to the core attributes of the game "light experience, low threshold, high fun", as follows:
+
+1. High time pressure
+
+The overall score of the time pressure dimension in the evaluation is high, which is one of the core load points, indicating that the task promotion rhythm, operation response window, level timing settings, etc. of the current game are beyond the adaptation range of some players, resulting in urgent negative experiences for players. The difficulty of the primary level has been reduced,
+
+Optimize the level timing design: cancel the forced timing of non-core links (such as scene exploration and prop selection), and only set reasonable timing in the core challenge links; and the timing threshold refers to the completion speed setting of the evaluator with a low score, and reserve buffer time.
+
+2. Differentiated and high value of frustration , Effort and Performance Satisfaction do not match
+
+The frustration dimension score is highly discrete (some evaluators score up to 10 points), and it is inversely related to "self-performance satisfaction", indicating that the player's negative emotions mainly come from the high cost of failure, lack of feedback, and the rapid increase in difficulty, which is a key problem affecting the retention of the game. The player's investment has not been The positive return should be reduced, thus reducing the game experience.
+
+Optimize the failure replay mechanism to reduce the sunk cost: after failing to break through the level, you don't need to start from the beginning, and you can revive from the key node of the current level.
+
+Increase instant positive feedback in the whole process: When players complete small operations, such as clicking correctly, collecting props, and unlocking small goals, they give feedback through visual effects, short sound effects, and light numerical rewards, rather than just feedback after the end of the level; even if the operation is wrong, only gentle hints are given to avoid negative accusation copywriting.
+
+3. The score for the evaluator is very discrete.
+
+The scoring standard difference in all dimensions is high, indicating that the game experience of different players varies greatly. The mini-game lacks universal experience design and needs to take into account the needs of different players.
+
+Do layered design for players to realize the basic experience of "thousands of people and thousands of faces": when entering the game for the first time, players can choose the difficulty or skip the preliminary test level. Unify the core interaction logic, reduce experience deviations, let players form operating habits, and reduce experience deviations caused by interaction inconsistency.
+
+
+
+Testing:
+
+With the improvement of functions and pages in the future of the game, test codes will be added one after another to prevent errors, and the simple test code will be designed in the current version:
+
+1. White box test code
+
+It is used to verify internal functions and variable logic. The following code cases are only for display to test whether the player's initial health is correct and whether the position is in the middle:
+
+let player = {};
+
+function resetPlayer() { 
+
+player.x = 960;
+
+player.y = 540;
+
+player.hp = 10;
+
+}
+
+ 
+
+function assert(condition, testName) { 
+
+if (condition) {
+
+console.log(`testing pass： ${testName}`);
+
+} else {
+
+console.log(`testing fail： ${testName}`);
+
+}
+
+}
+
+resetPlayer();
+
+assert(player.x === 960 && player.y === 540 && player.hp === 10, “player’s initial HP=10、 position=(960,540)”);
+
+ 
+
+2. Black box test code
+
+It is used to verify the performance of the player's input and output function, and give a case: the player presses the D key, and the output effect is that the character moves four units to the right:
+
+ 
+
+let player = { x: 960, y: 540 };
+
+function movePlayer(key) { 
+
+if (key === "D") {
+
+player.x += 4;
+
+}
+
+}
+
+function assert(condition, testName) { 
+
+if (condition) {
+
+console.log(`testing pass： ${testName}`);
+
+} else {
+
+console.log(`testing fail： ${testName}`);
+
+}
+
+}
+
+const originalX = player.x; 
+
+movePlayer("D");
+
+assert(player.x === originalX + 4, "The player presses the D key and moves 4 units to the right");
+
+
 
 ### Process 
 
