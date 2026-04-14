@@ -4,8 +4,8 @@ function resetPlayer() {
     player = {
         x: WORLD_W / 2, 
         y: WORLD_H / 2, 
-        size: 70, // 这个数值控制图像显示大小，不合适可以调
-        hp: 50
+        size: 100, // 这个数值控制图像显示大小，不合适可以调
+        hp: 80
     };
 }
 

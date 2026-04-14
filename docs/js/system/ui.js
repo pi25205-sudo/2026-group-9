@@ -63,7 +63,7 @@ function drawGameContent() {
             e.flashTimer--;
         }
     // 绘制敌人图片
-        image(enemyImages[e.imgKey], e.x, e.y, e.size, e.size);
+        image(enemyImages[e.imgKey], e.x, e.y, e.size*2, e.size*2);
         pop();
     // 血条完全不动
         drawHealthBar(e.x, e.y - (e.size * 0.75), e.hp, e.maxHp, "red");
