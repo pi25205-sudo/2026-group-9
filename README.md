@@ -75,6 +75,15 @@ GROUP PHOTO. Add a group photo here.
 - 15% ~750 words
 - Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
 
+### Conceptual Process
+When brainstorming for this game, we first proposed various game genres, including board games, Snake, Tetris, and Air Combat. After discussion and voting, we decided to develop a 2D survival shooter game (similar to Vampire Survivors), and split its development and expansion into two paths: the player character and enemies.
+
+For the player, we planned to incorporate multiple enhancement mechanics such as leveling up, weapons, equipment, and skills. For enemies, we intended to add diverse offensive mechanics including different enemy types, enemy skills, and enemy spawn quantities. Gameplay would be expanded by allowing players to level up and obtain weapon drops by defeating enemies.
+
+However, following further team discussion and negotiation, we realized that while leveling up and looting equipment from enemies both serve to strengthen the player, the drop rate and power of loot would heavily affect in-game enjoyment. Overpowered weapon drops would deprive players of fun, while underpowered ones would ruin the experience. Additionally, integrating player level bonuses into the weapon system would complicate numerical balancing. We also wanted to avoid overwhelming players with complex character progression systems, and instead let them focus more on the thrill of combat.
+
+With these considerations, we decided to integrate player leveling and weapon drops into roguelike gameplay. By defeating a certain number of enemies or surviving for a set duration, players would randomly obtain various buffs or weapons. This approach prevents players from overfocusing on character systems while ensuring each playthrough feels fresh and distinct from the last.
+
 ### Design
 
 - 15% ~750 words 
@@ -183,7 +192,11 @@ The frustration dimension score is highly discrete (some evaluators score up to 
 Optimize the failure replay mechanism to reduce the sunk cost: after failing to break through the level, you don't need to start from the beginning, and you can revive from the key node of the current level.
 
 Increase instant positive feedback in the whole process: When players complete small operations, such as clicking correctly, collecting props, and unlocking small goals, they give feedback through visual effects, short sound effects, and light numerical rewards, rather than just feedback after the end of the level; even if the operation is wrong, only gentle hints are given to avoid negative accusation copywriting.
-
+Conceptual Process
+When brainstorming for this game, we first proposed various game genres, including board games, Snake, Tetris, and Air Combat. After discussion and voting, we decided to develop a 2D survival shooter game (similar to Vampire Survivors), and split its development and expansion into two paths: the player character and enemies.
+For the player, we planned to incorporate multiple enhancement mechanics such as leveling up, weapons, equipment, and skills. For enemies, we intended to add diverse offensive mechanics including different enemy types, enemy skills, and enemy spawn quantities. Gameplay would be expanded by allowing players to level up and obtain weapon drops by defeating enemies.
+However, following further team discussion and negotiation, we realized that while leveling up and looting equipment from enemies both serve to strengthen the player, the drop rate and power of loot would heavily affect in-game enjoyment. Overpowered weapon drops would deprive players of fun, while underpowered ones would ruin the experience. Additionally, integrating player level bonuses into the weapon system would complicate numerical balancing. We also wanted to avoid overwhelming players with complex character progression systems, and instead let them focus more on the thrill of combat.
+With these considerations, we decided to integrate player leveling and weapon drops into roguelike gameplay. By defeating a certain number of enemies or surviving for a set duration, players would randomly obtain various buffs or weapons. This approach prevents players from overfocusing on character systems while ensuring each playthrough feels fresh and distinct from the last.
 3. The score for the evaluator is very discrete.
 
 The scoring standard difference in all dimensions is high, indicating that the game experience of different players varies greatly. The mini-game lacks universal experience design and needs to take into account the needs of different players.
