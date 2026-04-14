@@ -54,21 +54,20 @@ function drawGameContent() {
         drawHealthBar(e.x, e.y - (e.size * 0.75), e.hp, e.maxHp, "red");
     }*/
     
-    for (let e of enemies)
-         {
-            push();
-
-    // 直接画图片，原来的形状全部替换掉
-            imageMode(CENTER);
-            if (e.flashTimer > 0) {
-                tint(255, 150);
-                e.flashTimer--;
-            }
-            image(enemyImages[e.imgKey], e.x, e.y, e.size, e.size);
-
-            pop();
-            drawHealthBar(e.x, e.y - (e.size * 0.75), e.hp, e.maxHp, "red");
-         }
+    for (let e of enemies) {
+        push();
+        imageMode(CENTER);
+    // 受伤闪烁效果
+        if (e.flashTimer > 0) {
+            tint(255, 150);
+            e.flashTimer--;
+        }
+    // 绘制敌人图片
+        image(enemyImages[e.imgKey], e.x, e.y, e.size, e.size);
+        pop();
+    // 血条完全不动
+        drawHealthBar(e.x, e.y - (e.size * 0.75), e.hp, e.maxHp, "red");
+    }
     // 畫子彈
     fill(255, 255, 0);
     for (let b of bullets) ellipse(b.x, b.y, 12);

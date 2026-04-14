@@ -8,7 +8,7 @@ const ENEMY_POOL = {
         size: 30,
         contactDamage: 1,
         color: [255, 0, 0],
-        flashTimer: 0，
+        flashTimer: 0,
         imgKey: "enemy1" //new add for image
     },
     fast: {
@@ -20,7 +20,7 @@ const ENEMY_POOL = {
         size: 27,
         contactDamage: 1,
         color: [255, 100, 0],
-        flashTimer: 0，
+        flashTimer: 0,
         imgKey: "enemy2" //new for image 
     },
     tank: {
@@ -32,7 +32,7 @@ const ENEMY_POOL = {
         size: 50,
         contactDamage: 2,
         color: [0, 0, 255],
-        flashTimer: 0，
+        flashTimer: 0,
         imgKey: "enemy3"   //new add for image
      },
     splitter: {
@@ -44,7 +44,7 @@ const ENEMY_POOL = {
         size: 40,
         contactDamage: 2,
         color: [180, 0, 255],
-        splitCount: 2，
+        splitCount: 2,
         imgKey: "enemy4"    //new 
     },
     sprinter: {
@@ -57,7 +57,7 @@ const ENEMY_POOL = {
         contactDamage: 3,
         color: [255, 40, 120],
         sprintSpeed: 4.8,
-        sprintPeriod: 25，
+        sprintPeriod: 25,
         imgKey: "enemy5" //new
     }
 };

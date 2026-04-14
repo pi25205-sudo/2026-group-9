@@ -1,4 +1,5 @@
 let playerImg; // new add for image
+let enemyImages={};
 
 function preload() {
     preloadAssets();
@@ -17,7 +18,7 @@ function preload() {
     enemyImages.enemy3 = loadImage('asset/enemy/enemy3.png');
     enemyImages.enemy4 = loadImage('asset/enemy/enemy4.png');
     enemyImages.enemy5 = loadImage('asset/enemy/enemy5.png');
-    //new add
+ //new add
 }
 
 function setup() {
