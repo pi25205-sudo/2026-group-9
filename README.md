@@ -85,6 +85,8 @@ However, following further team discussion and negotiation, we realized that whi
 With these considerations, we decided to integrate player leveling and weapon drops into roguelike gameplay. By defeating a certain number of enemies or surviving for a set duration, players would randomly obtain various buffs or weapons. This approach prevents players from overfocusing on character systems while ensuring each playthrough feels fresh and distinct from the last.
 
 ### User Story
+| **Question** **No.** | **Epic** | **User Story** | **Acceptance Criteria** |
+| --- | --- | --- | --- |
 | Player | Epic 1: Core Survival & Combat System | As a player, I want to control my character's movement with WASD keys, so that I can navigate the game world flexibly to avoid enemies. | Acceptance Criteria: Given the game is in an active play state, when the player presses W/A/S/D keys respectively, then the character moves upward/left/down/right continuously; when the key is released, the character stops moving immediately. |
 
 | Player | Epic 1: Core Survival & Combat System | As a player, I want my character to auto-attack toward the mouse direction, so that I can focus on movement and strategy instead of manual attacking. | Acceptance Criteria: Given the game is running and the character is alive, when the player moves the mouse to a target direction, then the character automatically launches attacks (projectiles/melee) toward the mouse cursor at a fixed attack rate; attacks stop only if the character dies or the game is paused. |
